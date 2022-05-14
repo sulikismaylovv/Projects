@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_dark_background"
+    >
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Wordle"
+        android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
+        android:textColor="@color/white"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="180dp"/>
+
+
+
+    <EditText
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cursorVisible="false"
+        android:textColor="@color/cardview_dark_background">
+
+    </EditText>
+
+    <TextView
+        android:id="@+id/hidden"
+        android:layout_width="225dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
+        android:textColor="@color/white"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="120dp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_q"
+                style="@android:style/Widget.KeyboardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/background"
+                android:text="Q"
+                app:backgroundTint="@color/cardview_dark_background"
+                />
+
+            <Button
+                android:id="@+id/button_w"
+                style="@android:style/Widget.KeyboardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="W"
+                app:backgroundTint="@color/cardview_dark_background" />
+
+            <Button
+                android:id="@+id/button_e"
+                style="@android:style/Widget.KeyboardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="E"
+                app:backgroundTint="@color/cardview_dark_background" />
+
+            <Button
+                android:id="@+id/button_r"
+                style="@android:style/Widget.KeyboardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="R"
+                app:backgroundTint="@color/cardview_dark_background" />
+
+            <Button
+                android:id="@+id/button_t"
+                style="@android:style/Widget.KeyboardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="T"
+                app:backgroundTint="@color/cardview_dark_background" />
+
+            <Button
+                android:id="@+id/button_y"
+                style="@android:style/Widget.KeyboardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Y"
+                app:backgroundTint="@color/cardview_dark_background" />
+
+            <Button
+                android:id="@+id/button_u"
+                style="@android:style/Widget.KeyboardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="U"
+                app:backgroundTint="@color/cardview_dark_background" />
+
+            <Button
+                android:id="@+id/button_i"
+                style="@android:style/Widget.KeyboardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="I"
+                app:backgroundTint="@color/cardview_dark_background" />
+
+            <Button
+                android:id="@+id/button_o"
+                style="@android:style/Widget.KeyboardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="O"
+                app:backgroundTint="@color/cardview_dark_background" />
+
+            <Button
+                android:id="@+id/button_p"
+                style="@android:style/Widget.KeyboardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="P"
+                app:backgroundTint="@color/cardview_dark_background" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_a"
+                style="@android:style/Widget.KeyboardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="A"
+                app:backgroundTint="@color/cardview_dark_background" />
+
+            <Button
+                android:id="@+id/button_s"
+                style="@android:style/Widget.KeyboardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="S"
+                app:backgroundTint="@color/cardview_dark_background" />
+
+            <Button
+                android:id="@+id/button_d"
+                style="@android:style/Widget.KeyboardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="D"
+                app:backgroundTint="@color/cardview_dark_background" />
+
+            <Button
+                android:id="@+id/button_f"
+                style="@android:style/Widget.KeyboardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="F"
+                app:backgroundTint="@color/cardview_dark_background" />
+
+            <Button
+                android:id="@+id/button_g"
+                style="@android:style/Widget.KeyboardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="G"
+                app:backgroundTint="@color/cardview_dark_background" />
+
+            <Button
+                android:id="@+id/button_h"
+                style="@android:style/Widget.KeyboardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="H"
+                app:backgroundTint="@color/cardview_dark_background" />
+
+            <Button
+                android:id="@+id/button_j"
+                style="@android:style/Widget.KeyboardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="J"
+                app:backgroundTint="@color/cardview_dark_background" />
+
+            <Button
+                android:id="@+id/button_k"
+                style="@android:style/Widget.KeyboardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="K"
+                app:backgroundTint="@color/cardview_dark_background" />
+
+            <Button
+                android:id="@+id/button_l"
+                style="@android:style/Widget.KeyboardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="L"
+                app:backgroundTint="@color/cardview_dark_background" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_enter"
+                style="@android:style/Widget.KeyboardView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:drawable/ic_menu_set_as"
+                app:backgroundTint="@color/white" />
+
+            <Button
+                android:id="@+id/button_z"
+                style="@android:style/Widget.KeyboardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Z"
+                app:backgroundTint="@color/cardview_dark_background" />
+
+            <Button
+                android:id="@+id/button_x"
+                style="@android:style/Widget.KeyboardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="X"
+                app:backgroundTint="@color/cardview_dark_background" />
+
+            <Button
+                android:id="@+id/button_c"
+                style="@android:style/Widget.KeyboardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="C"
+                app:backgroundTint="@color/cardview_dark_background" />
+
+            <Button
+                android:id="@+id/button_v"
+                style="@android:style/Widget.KeyboardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="V"
+                app:backgroundTint="@color/cardview_dark_background" />
+
+            <Button
+                android:id="@+id/button_b"
+                style="@android:style/Widget.KeyboardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="B"
+                app:backgroundTint="@color/cardview_dark_background" />
+
+            <Button
+                android:id="@+id/button_n"
+                style="@android:style/Widget.KeyboardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="N"
+                app:backgroundTint="@color/cardview_dark_background" />
+
+            <Button
+                android:id="@+id/button_m"
+                style="@android:style/Widget.KeyboardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="M"
+                app:backgroundTint="@color/cardview_dark_background" />
+
+            <Button
+                android:id="@+id/button_delete"
+                style="@android:style/Widget.KeyboardView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:drawable/ic_input_delete"
+                app:backgroundTint="@color/white" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="100dp"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/Box1"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/background"
+                />
+
+            <ImageView
+                android:id="@+id/Box2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/background" />
+
+            <ImageView
+                android:id="@+id/Box3"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/background" />
+
+            <ImageView
+                android:id="@+id/Box4"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/background" />
+
+            <ImageView
+                android:id="@+id/Box5"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/background" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/Box6"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/background" />
+
+            <ImageView
+                android:id="@+id/Box7"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/background" />
+
+            <ImageView
+                android:id="@+id/Box8"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/background" />
+
+            <ImageView
+                android:id="@+id/Box9"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/background" />
+
+            <ImageView
+                android:id="@+id/Box10"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/background" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/Box11"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/background" />
+
+            <ImageView
+                android:id="@+id/Box12"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/background" />
+
+            <ImageView
+                android:id="@+id/Box13"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/background" />
+
+            <ImageView
+                android:id="@+id/Box14"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/background" />
+
+            <ImageView
+                android:id="@+id/Box15"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/background" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/Box16"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/background" />
+
+            <ImageView
+                android:id="@+id/Box17"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/background" />
+
+            <ImageView
+                android:id="@+id/Box18"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/background" />
+
+            <ImageView
+                android:id="@+id/Box19"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/background" />
+
+            <ImageView
+                android:id="@+id/Box20"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/background" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/Box21"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/background" />
+
+            <ImageView
+                android:id="@+id/Box22"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/background" />
+
+            <ImageView
+                android:id="@+id/Box23"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/background" />
+
+            <ImageView
+                android:id="@+id/Box24"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/background" />
+
+            <ImageView
+                android:id="@+id/Box25"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/background" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>
