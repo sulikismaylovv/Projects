@@ -1,5 +1,7 @@
+from curses.ascii import ESC
 import pygame
-from sqlalchemy import true
+from pygame.locals import *
+import pygame.event
 
 if __name__ == "__main__":
     pygame.init()
@@ -11,7 +13,10 @@ if __name__ == "__main__":
     running = true
     
     while running:
-        pass
+        for event in pygame.event.get():
+            if event.type == QUIT :
+                if event.key == K_ESCAPE:
+                    surface.pygame.mixer.quit()
 
 
     
