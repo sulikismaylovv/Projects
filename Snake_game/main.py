@@ -1,7 +1,5 @@
-from curses.ascii import ESC
 import pygame
 from pygame.locals import *
-import pygame.event
 import time
 
 class Game:
