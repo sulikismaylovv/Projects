@@ -1,8 +1,18 @@
-import time
 import pygame
+from sqlalchemy import true
 
 if __name__ == "__main__":
     pygame.init()
 
     surface = pygame.display.set_mode((1000,500))
-    time.sleep(5)
+    surface.fill((92,25,84))
+    pygame.display.flip()
+
+    running = true
+    
+    while running:
+        pass
+
+
+    
+    
