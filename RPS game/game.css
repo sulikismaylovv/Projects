@@ -1,0 +1,28 @@
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #1f2937;
+    padding: 2rem 3rem;
+    border-radius: 25%;
+    margin: 0 auto;
+    background-color: yellow;
+    color: black;
+    font-size: medium;
+}
+
+.game {
+    display: flex;
+    justify-content: space-between;
+    visibility: hidden;
+}
+
+* {
+    background-color: #143d59;
+    max-width: 1000px;
+    padding: 20px;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+    font-size: larger;
+}

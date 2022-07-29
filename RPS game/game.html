@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="game.css">
+    <title>RPS game</title>
+</head>
+
+<body>
+    <div class="upper_part">
+        <p id="p">Press to play a game!</p>
+    </div>
+    <div class="game" id="game">
+        <button class="btn" id="rock">Rock</button>
+        <button class="btn" id="paper">Paper</button>
+        <button class="btn" id="scissors">Sciccors</button>
+    </div>
+    <div class="play">
+        <button class="btn" id="play" onclick="game() ">Play!</button>
+    </div>
+    <div>
+        <p id="game_text"></p>
+    </div>
+
+    <script>
+        //html part
+        const btn_play = document.getElementById('play');
+        const p_text = document.getElementById('p');
+        const game_text = document.getElementById('game_text');
+        const div_game = document.getElementById('game');
+        const btn_rock = document.getElementById('rock');
+        const btn_paper = document.getElementById('paper');
+        const btn_sci = document.getElementById('scissors');
+        //game logic
+        const answers = ["rock ", "paper ", "scissors "];
+        var i = 0;
+        var text = "Round " + (i + 1) + "! Make your move!";
+        var userScore = 0;
+        var GameScore = 0;
+
+        function game() {
+            userScore = 0;
+            GameScore = 0;
+            i = 0;
+            btn_play.style.visibility = "hidden";
+            p_text.style.visibility = "visible";
+            div_game.style.visibility = "visible";
+            checkScore();
+            btn_rock.addEventListener('click', () => {
+                compareMoves("rock ", generateComputerMove());
+                i++;
+                checkScore();
+            });
+            btn_paper.addEventListener('click', () => {
+                compareMoves("paper ", generateComputerMove());
+                i++;
+                checkScore();
+            });
+            btn_sci.addEventListener('click', () => {
+                compareMoves("scissors ", generateComputerMove());
+                i++;
+                checkScore();
+            });
+            btn_play.addEventListener('click', () => {
+                location.reload();
+            });
+            
+            
+        }
+
+        function checkScore() {
+            text = "Round " + (i + 1) + "! Make your move!";
+            if (userScore == 3 || GameScore == 3) {
+                if (GameScore > userScore) {
+                    text = "You lost! " + "\r\n " + "Your score: " + userScore + "\r\n " + "Computer Score: " + GameScore;
+                }
+                if (GameScore < userScore) {
+                    text = "You won! " + "\r\n " + "Your score: " + userScore + "\r\n " + "Computer Score: " + GameScore;
+                }
+                if (GameScore == userScore) {
+                    text = "Draw! " + "\r\n " + "Your score: " + userScore + "\r\n " + "Computer Score: " + GameScore;
+                }
+                btn_play.style.visibility = "visible";
+                div_game.style.visibility = "hidden";
+                game_text.style.visibility = "hidden";
+            }
+            p_text.innerHTML = text;
+        }
+
+
+        function compareMoves(move1, move2) {
+            var moveUser = String(move1).toLowerCase();
+            var moveGame = String(move2);
+
+            console.log("Your move: " + moveUser + ". Computer Move: " + moveGame);
+
+            if (moveUser.charAt(0) == "r") {
+                if (moveGame.charAt(0) == "r") {
+                    text = 'Draw!'
+                }
+                if (moveGame.charAt(0) == "s") {
+                    text = 'You win! Rock breaks Scissors.'
+                    userScore += 1
+                }
+                if (moveGame.charAt(0) == "p") {
+                    text = 'You lost! Paper covers Rock!'
+                    GameScore += 1
+                }
+            }
+            if (moveUser.charAt(0) == "s") {
+                if (moveGame.charAt(0) == "s") {
+                    text = 'Draw!'
+                }
+                if (moveGame.charAt(0) == "p") {
+                    text = 'You win! Scissors cut Paper.'
+                    userScore += 1
+                }
+                if (moveGame.charAt(0) == "r") {
+                    text = 'You lost! Rock breaks Scissors'
+                    GameScore += 1
+                }
+            }
+            if (moveUser.charAt(0) == "p") {
+                if (moveGame.charAt(0) == "p") {
+                    text = 'Draw!'
+                }
+                if (moveGame.charAt(0) == "r") {
+                    text = 'You win! Paper cover Rock.'
+                    userScore += 1
+                }
+                if (moveGame.charAt(0) == "s") {
+                    text = 'You lost! Scissors cut Paper.'
+                    GameScore += 1
+                }
+            }
+            game_text.innerHTML = text;
+            console.log(userScore);
+            console.log(GameScore);
+
+        }
+
+        function generateComputerMove() {
+            let comMove = answers[randomInteger(0, 3)];
+            return comMove;
+        }
+
+        function randomInteger(min, max) {
+            return Math.floor(Math.random() * (max - min) + min);
+        }
+    </script>
+</body>
+
+</html>

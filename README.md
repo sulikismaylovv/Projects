@@ -1,2 +1,2 @@
 # Projects
-This repository contains all the project that I have been working on so far.
+This repository contains all the projects that I have been working on so far.
